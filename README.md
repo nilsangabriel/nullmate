@@ -8,8 +8,8 @@
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![GitHub Issues](https://img.shields.io/github/issues/lowlevelape/chesster.svg)](https://github.com/lowlevelape/chesster/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/lowlevelape/chesster.svg)](https://github.com/lowlevelape/chesster/pulls)
+  [![GitHub Issues](https://img.shields.io/github/issues/nilsangabriel/nullmate.svg)](https://github.com/nilsangabriel/nullmate/issues)
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/nilsangabriel/nullmate.svg)](https://github.com/nilsangabriel/nullmate/pulls)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -25,7 +25,6 @@
 - [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Contributing](#contrib)
-- [Known Issues](#issues)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgement)
 
@@ -41,8 +40,8 @@ First, you'll need docker installed on your system. See [Docker](https://docs.do
 
 ```
 # clone the repo
-git clone https://github.com/lowlevelape/chesster.git
-cd chesster
+git clone https://github.com/nilsangabriel/nullmate.git
+cd nullmate
 ```
 
 2. Run the docker compose file
@@ -55,14 +54,14 @@ docker compose up -d
 ```
 
 ## Usage <a name = "usage"></a>
-Open your preferred browser, and visit `localhost:3000` to play the game.
+Open your preferred browser, and visit `localhost:6700` to play the game, or `<your-ip>` to play the game on a different device.
 
 ## Known Issues <a name = "issues"></a>
-- No response sent to engine server when on mobile.
-- Engine takes too much time in searching.
+- ~~No response sent to engine server when on mobile.~~
+- ~~Engine takes too much time in searching.~~ (temporary)
 
 ## Authors <a name = "authors" />
-- [@lowlevelape](https://github.com/lowlevelape)
+- [@nilsangabriel](https://github.com/nilsangabriel)
 
 ## Contributing <a name ="contrib" />
 

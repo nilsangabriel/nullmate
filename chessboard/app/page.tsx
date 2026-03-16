@@ -52,10 +52,10 @@ export default function Game() {
     setThinking(true);
 
     try {
-      const response = await fetch("http://localhost:4000/move", {
+      const response = await fetch("api/move", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fen: game.fen(), depth: 10 }),
+        body: JSON.stringify({ fen: game.fen(), depth: 7 }),
       });
 
       const data = await response.json();

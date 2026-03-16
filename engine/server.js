@@ -5,13 +5,7 @@ const path = require("path");
 
 const app = express();
 app.use(express.json());
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
-  }),
-);
+app.use(cors());
 
 // Start engine with better error handling
 const enginePath = path.join(__dirname, "build", "chen");
@@ -37,6 +31,10 @@ engine.stdout.on("data", (data) => {
 
 engine.stdin.write("uci\n");
 
+// Set hash size for storing previous calculations
+engine.stdin.write("setoption name Hash value 64\n");
+engine.stdin.write("isready\n");
+
 let isThinking = false;
 
 app.get("/health", (req, res) => {
@@ -48,7 +46,7 @@ app.post("/move", async (req, res) => {
     return res.status(503).json({ error: "Engine not ready" });
   }
 
-  const { fen, depth = 10 } = req.body;
+  const { fen, depth = 9 } = req.body;
   console.log(`--- FEN: ${fen} (depth ${depth}) ---`);
 
   if (isThinking) {
@@ -64,7 +62,7 @@ app.post("/move", async (req, res) => {
       isThinking = false;
       res.status(408).json({ error: "Engine Timeout", buffer });
       resolve();
-    }, 20000); // ← 20s timeout
+    }, 20000); // 20s timeout
 
     const onData = (data) => {
       buffer += data.toString();
@@ -88,4 +86,7 @@ app.post("/move", async (req, res) => {
 });
 
 const PORT = 4000;
-app.listen(PORT, () => console.log(`Engine Server running on port ${PORT}`));
+const HOST = "0.0.0.0";
+app.listen(PORT, HOST, () =>
+  console.log(`Engine Server running on port ${PORT}`),
+);

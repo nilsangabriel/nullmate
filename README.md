@@ -29,7 +29,7 @@
 - [Acknowledgments](#acknowledgement)
 
 ## About <a name = "about"></a>
-Chesster is my very first personal project that I want to showcase for users to try out themselves. If you look at the code structure it's a bit messy and ugly as I am still learning web development while making this project, and I'll probably  continue on improving it the along the way.
+Nullmate is my very first personal project that I want to showcase for users to try out themselves. If you look at the code structure it's a bit messy and ugly as I am still learning web development while making this project, and I'll probably  continue on improving it the along the way.
 
 ## Getting Started <a name = "getting_started"></a>
 ### Prerequisites

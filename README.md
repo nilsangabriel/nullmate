@@ -3,7 +3,7 @@
  <img width=200px height=200px src="icon.png" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Chesster</h3>
+<h3 align="center">Nullmate</h3>
 
 <div align="center">
 
